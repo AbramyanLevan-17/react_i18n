@@ -16,8 +16,10 @@ import SignIn from './components/SignIn';
 import ForgetPass from './components/ForgetPass';
 
 function App({ t }) {
+  const [flag, setFlag] = useState('en');
   const changeLanguage = (event) => {
     i18n.changeLanguage(event.target.value);
+    setFlag(event.target.value)
   }
   return (
     <div className='app'>
@@ -25,6 +27,7 @@ function App({ t }) {
       <Router>
         <Nav 
         t={t}
+        flag={flag}
         changeLanguage={changeLanguage}/>
         <Switch>
           <Route exact path='/'>
