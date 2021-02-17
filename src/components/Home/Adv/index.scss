@@ -1,0 +1,159 @@
+@import '../../breakpoints.scss';
+
+.adv {
+  background-color: #fff;
+  width: 100%;
+  font-family: Geometria;
+  display: flex;
+  justify-content: center;
+
+  .adv__wrapper {
+    padding: 126px 0px 263px;
+    display: flex;
+  }
+  .adv__column {
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+  }
+  .adv__title {
+    font-weight: 700;
+    font-size: 50px;
+    color: #000;
+  }
+  .adv__subtitle {
+    font-weight: 700;
+    font-size: 50px;
+    color: #39a1dc;
+    margin-bottom: 30px;
+  }
+  .adv__text {
+    font-size: 18px;
+    line-height: 31.34px;
+    font-weight: 400;
+    color: #242537;
+    max-width: 540px;
+    margin-bottom: 30px;
+  }
+  .adv__row {
+    display: flex;
+  }
+  .adv__signup {
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    color: #fff;
+    font-weight: 500;
+    background: #31C6F1;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 6px 20px rgba(49, 198, 241, 0.42));
+    span {
+      text-transform: uppercase;
+    }
+  }
+  .adv__presentation {
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    border: 2px solid #0BA1DC;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #0BA1DC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40.38px;
+    span {
+      text-transform: uppercase;
+    }
+
+    & svg {
+      padding-right: 10.76px;
+      
+    }
+  }
+  .adv__video {
+    width: 600px;
+    height: 330.98px;
+    position: relative;
+    img {
+      box-shadow: 0px 25px 45px rgba(196, 198, 200, 0.5);
+      border-radius: 10px;  
+    }
+    .play {
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+}
+
+@include breakpoint('tablet') {
+  .adv {
+    .adv__wrapper {
+      width: 100%;
+      flex-direction: column;
+      padding: 129px 84px 110px;
+      align-items: center;
+      justify-content: center;
+      .adv__text {
+        max-width: 100%;
+        text-align: center;
+      }
+      .adv__column {
+        padding-right: 0;
+        align-items: center;
+        margin-bottom: 100px;
+      }
+    }
+  }
+}
+
+@include breakpoint('phone') {
+  .adv {
+    .adv__wrapper {
+      width: 100%;
+      padding: 50px 17px 60px;
+      flex-direction: column;
+      .adv__column {
+        padding-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+        .adv__title,
+        .adv__subtitle {
+          font-size: 35px;
+        }
+        .adv__text {
+          font-size: 16px;
+        }
+      }
+    }
+    .adv__row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .adv__presentation {
+      margin-left: 0;
+     
+     
+    }
+    .adv__signup {
+      margin-bottom: 30px;
+      
+      
+    }
+    .adv__video {
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

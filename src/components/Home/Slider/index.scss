@@ -1,0 +1,90 @@
+@import '../../breakpoints.scss';
+
+// Crome
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input[type='range'].profit__range {
+
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #F0F3F6;
+    height: 3px;
+    border-radius: 15px;
+    transition: background 450ms ease-in;
+  }
+  
+  input[type='range'].profit__range::-webkit-slider-runnable-track {
+    height: 3px;
+    -webkit-appearance: none;
+    color: #0BA1DC;
+    margin-top: -1px;
+    
+  }
+  
+  
+  input[type='range'].profit__range::-webkit-slider-thumb {
+    width: 25px;
+    -webkit-appearance: none;
+    height: 25px;
+    cursor: pointer;
+    background: #0BA1DC;
+    border-radius: 50%;
+    margin-top: -10px;
+    
+  }
+
+}
+
+/** FF*/
+input[type=range].profit__range::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background: #0BA1DC;
+  border-radius: 50%;
+  border: none;
+}
+input[type="range"].profit__range::-moz-range-progress {
+  background-color: #0BA1DC; 
+}
+input[type="range"].profit__range::-moz-range-track {  
+  background-color: #F0F3F6;
+}
+/* IE*/
+input[type=range].profit__range::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background: #0BA1DC;
+  border-radius: 50%;
+  border: none;
+}
+input[type="range"].profit__range::-ms-fill-lower {
+  background-color: #0BA1DC; 
+}
+input[type="range"].profit__range::-ms-fill-upper { 
+  background-color: #F0F3F6;
+}
+
+.range {
+  font-family: Geometria;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #B7B6C3;
+  font-weight: 400;
+  max-width: 508px;
+  width: 100%;
+  .range__row {
+    width: 100%;
+    padding-top: 12.87px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+
+@include breakpoint('tablet') {
+  .range {
+    width: 100%;
+  }
+}

@@ -1,0 +1,72 @@
+@import '../fonts.scss';
+@import '../breakpoints.scss';
+
+.menu {
+  background-color: #fff;
+  height: 66px;
+  width: 100%;
+  font-family: Geometria;
+  font-size: 14px;
+  color: #242537;
+  display: flex;
+  align-items: center;
+   .menu__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 75px;
+    width: 100%;
+  }
+  .menu__right-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+  }
+  .menu__lang {
+    font-weight: 400;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 8.38px;
+    }
+  }
+  .menu__signin {
+    font-weight: 500;
+    padding-right: 10px;
+    color: #242537;
+    text-transform: uppercase;
+  }
+  .menu__signup {
+    background-color: #31C6F1;
+    border-radius: 50px;
+    color: #fff;
+    height: 40px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    & span {
+    font-weight: 500;
+    }
+  }
+
+}
+
+@include breakpoint('phone') {
+  .menu {
+    .menu__wrapper {
+      padding: 0px 17px;
+    }
+    .menu__right-side {
+      display: none;
+    }
+  }
+}

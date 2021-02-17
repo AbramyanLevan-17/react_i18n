@@ -1,0 +1,62 @@
+@import '../../breakpoints.scss';
+
+.map {
+  margin-top: 55px;
+  position: relative;
+  .map__svg {
+    
+  }
+  .map__title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #242537;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+  .map__subtitle {
+    width: 100%;
+    max-width: 620px;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    line-height: 31.34px;
+    color: #242537;
+  }
+  .map__teleg {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@include breakpoint('tablet') {
+  .map {
+    .map__svg {
+      width: 100%;
+    }
+    .map__title {
+      width: 100%;
+    }
+  }
+}
+
+@include breakpoint('phone') {
+  .map {
+    .map__svg {
+      width: 100%;
+    }
+    .map__title {
+      width: 100%;
+    }
+    .map__subtitle {
+      top: 50%;
+    }
+  }
+}

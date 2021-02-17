@@ -1,0 +1,186 @@
+@import '../../breakpoints.scss';
+
+.leadership {
+  font-family: Geometria;
+  background-color: #fff;
+  position: relative;
+  .leadership__svg {
+    position: absolute;
+    top: 10%;
+  }
+
+  .leadership__wrapper {
+    padding: 100px 0px;
+    margin: 0 auto;
+    max-width: 915px;
+    width: 100%;
+
+
+  .leadership__title {
+    font-size: 40px;
+    line-height: 50.32px;
+    color: #242537;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+  .leadership__row {
+    display: flex;
+    justify-content: center;
+
+    .leadership__avatar {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      position: relative;
+      margin-right: 34.62px;
+      .mask {
+       
+      }
+      .checked {
+        position: absolute;
+        right: 10px;
+        bottom: -20px;
+        z-index: 2;
+      }
+    }
+    .leadership__info {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      .info__blue {
+        color:#0BA1DC;
+      }
+      .info__black {
+        color: #242537;
+      }
+    }
+    .leadership__text {
+      font-size: 16px;
+      font-weight: 400;
+      color: #242537;
+      line-height: 27.86px;
+      margin-bottom: 30px;
+    }
+    .leadership__subrow {
+      display: flex;
+      .leadership__sign {
+        margin-right: 63.62px;
+      }
+      .leadership__socials {
+        display: flex;
+        align-items: center;
+        width: 394px;
+        height: 55px;
+        background-color: #f0f3f6;
+        border-radius: 5px;
+        padding: 15px 38px;
+        
+        .socials__text {
+          color: #242537;
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-weight: 700;
+          margin-right: 62.38px;
+        }
+        .social__row {
+          display: flex;
+          align-items: center;
+          .social__item {
+            margin-right: 31px;
+            cursor: pointer;
+            &:last-child {
+              margin-right: 0px;
+            }
+            & path:hover {
+              fill: #0BA1DC !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  }
+}
+
+@include breakpoint('tablet') {
+  .leadership {
+    .leadership__wrapper {
+      .leadership__row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .leadership__avatar {
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+        .leadership__info {
+          margin-bottom: 30px;
+        }
+        .leadership__ceo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          .leadership__subrow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .leadership__sign {
+              margin-right: 0;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint('phone') {
+  .leadership {
+    .leadership__wrapper {
+      padding: 50px 17px;
+      .leadership__title {
+        font-size: 35px;
+        margin-bottom: 24px;
+      }
+      .leadership__row {
+        flex-direction: column;
+        align-items: center;
+        .leadership__avatar {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+        .leadership__info {
+          margin-bottom: 30px;
+        }
+        .leadership__ceo {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          .leadership__subrow {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .leadership__socials {
+              width: 100%;
+            }
+            .leadership__sign {
+              margin-right: 0;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

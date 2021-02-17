@@ -1,25 +1,49 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import i18n from './i18n';
+import { withNamespaces } from "react-i18next";
 
-function App() {
+import Home from './components/Home';
+import SignUp from './components/SignUp';
+import Nav from './components/Nav'
+import Footer from './components/Footer';
+import SignIn from './components/SignIn';
+import ForgetPass from './components/ForgetPass';
+
+function App({ t }) {
+  const changeLanguage = (event) => {
+    i18n.changeLanguage(event.target.value);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+
+      <Router>
+        <Nav 
+        t={t}
+        changeLanguage={changeLanguage}/>
+        <Switch>
+          <Route exact path='/'>
+            <Home  t={t}/>
+          </Route>
+          <Route path='/sign-up'>
+            <SignUp />
+          </Route>
+          <Route path='/sign-in'>
+            <SignIn />
+          </Route>
+          <Route path='/forget-pass'>
+            <ForgetPass />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }
 
-export default App;
+export default withNamespaces()(App);

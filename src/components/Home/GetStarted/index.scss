@@ -1,0 +1,191 @@
+@import '../../breakpoints.scss';
+
+.start {
+  font-family: Geometria;
+  background: #fff;
+  .start__wrapper {
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .start__title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 50.32px;
+      color: #242537;
+      margin-bottom: 30px;
+    }
+    .start__sub-title {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 31.34px;
+      color: #242537;
+      max-width: 620px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .start__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
+      height: 60px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      background: #31C6F1;
+      border-radius: 50px;
+      margin-bottom: 123px;
+      filter: drop-shadow(0px 6px 20px rgba(49, 198, 241, 0.42));
+      cursor: pointer;
+    }
+    .start__card {
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px;
+      .card__info {
+        display: flex;
+        flex-direction: column;
+        margin-right: 97px;
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 3px;
+          height: 153px;
+          background: rgba(11, 161, 220, 0.15);
+          left: -30px;
+        }
+      }
+      .card__num {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 38px;
+        color: #0BA1DC;
+        margin-bottom: 8px;
+      }
+      .card__title {
+        font-size: 30px;
+        font-weight: 700;
+        color: #242537;
+        line-height: 38px;
+        margin-bottom: 20px;
+      }
+      .card__text {
+        max-width: 450px;
+        font-size: 16px;
+        line-height: 27.86px; 
+        color: #242537;
+      }
+      
+    }
+    .start__card_reverse {
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px;
+      .card__info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 128px;
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 3px;
+          height: 153px;
+          background: rgba(11, 161, 220, 0.15);
+          left: -30px;
+        }
+      }
+      .card__num {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 38px;
+        color: #0BA1DC;
+        margin-bottom: 8px;
+      }
+      .card__title {
+        font-size: 30px;
+        font-weight: 700;
+        color: #242537;
+        line-height: 38px;
+        margin-bottom: 20px;
+      }
+      .card__text {
+        max-width: 450px;
+        font-size: 16px;
+        line-height: 27.86px; 
+        color: #242537;
+      }
+   
+    }
+  }
+  .card__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    background: #31C6F1;
+    color: #fff;
+    font-weight: 500px;
+    text-transform: uppercase;
+    filter: drop-shadow(0px 6px 20px rgba(49, 198, 241, 0.42));
+   
+  }
+}
+
+@include breakpoint('tablet') {
+  .start {
+    .start__wrapper {
+      text-align: center;
+      .start__card {
+        flex-direction: column;
+        margin-bottom: 40px;
+        .card__info {
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+      }
+      .start__card_reverse {
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+        .card__info {
+          margin-left: 0;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+
+}
+
+@include breakpoint('phone') {
+  .start {
+    .start__wrapper {
+      padding: 50px 17px 100px;
+      text-align: center;
+      .start__title {
+        font-size: 35px;
+      }
+      .start__card {
+        flex-direction: column;
+        margin-bottom: 40px;
+        .card__info {
+          margin-right: 0;
+          margin-bottom: 50px;
+        }
+      }
+      .start__card_reverse {
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+        .card__info {
+          margin-left: 0;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
+}

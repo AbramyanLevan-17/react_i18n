@@ -1,0 +1,56 @@
+.signin {
+  font-family: Geometria;
+  background: #F0F3F6;
+  padding: 70px 0px;
+  display: flex;
+  justify-content: center;
+
+  .signin__wrapper {
+    padding: 45px 68px 60px 67px;
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 10px 25px rgba(196, 198, 200, 0.25);
+    border-radius: 10px;
+
+    .signin__title {
+      font-size: 35px;
+      color: #242537;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
+    .signin__forget {
+      color: #0BA1DC;
+      align-self: flex-end;
+      margin-top: -20px;
+      margin-bottom: 40px;
+      a {
+        color: #0BA1DC;
+      }
+    }
+    .signin__button {
+      width: 250px;
+      height: 60px;
+      background: #31C6F1;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #fff;
+      filter: drop-shadow(0px 6px 20px rgba(49, 198, 241, 0.42));
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+    .signin__signup {
+      color: #242537;
+      a {
+        color: #31C6F1;
+      }
+    }
+  }
+}

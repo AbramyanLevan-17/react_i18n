@@ -1,0 +1,85 @@
+@import '../fonts.scss';
+@import '../breakpoints.scss';
+
+.signup {
+  font-family: Geometria;
+  background: #F0F3F6;
+  .signup__wrapper {
+    padding: 70px 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .signup__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 600px;
+      background: #fff;
+      box-shadow: 0px 10px 25px rgba(196, 198, 200, 0.25);
+      border-radius: 10px;  
+      padding: 45px 71px 60px 64px;  
+
+      .signup__title {
+        font-size: 25px;
+        font-weight: 500;
+        color: #242537;
+        margin-bottom: 20px;
+      }
+      .signup__subtitle {
+        color: #242537;
+        margin-bottom: 35px;
+        a {
+          color: #31C6F1;
+        }
+      }
+      .signup__agreement {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #242537;
+        a {
+          color: #31C6F1;
+        }
+      }
+      .g-recaptcha {
+        align-self: flex-start;
+        margin-bottom: 20px;
+      }
+      .signup__button {
+        width: 250px;
+        height: 60px;
+        background: #31C6F1;
+        border-radius: 50px;
+        filter: drop-shadow(0px 6px 20px rgba(49, 198, 241, 0.42));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@include breakpoint('tablet') {
+  .signup {
+    .signup__wrapper {
+      padding: 70px 84px;
+    }
+  }
+}
+
+@include breakpoint('phone') {
+  .signup {
+    .signup__wrapper {
+      padding: 70px 17px;
+      .signup__form {
+        padding: 45px 20px 60px;
+      }
+    }
+  }
+}

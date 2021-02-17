@@ -1,0 +1,21 @@
+.planner__item {
+  width: 90px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #242537;
+  font-size: 14px;
+  background-color: #F0F3F6;
+  border-radius: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  z-index: 3;
+  &:hover {
+    border: 2px solid #0BA1DC;
+  }
+  .planner__item-active {
+    background-color: #0BA1DC;
+    color: #fff;
+  }
+}

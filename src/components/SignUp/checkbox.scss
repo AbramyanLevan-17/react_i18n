@@ -1,0 +1,29 @@
+.checkbox_grey {
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+  background: #F0F3F6;
+  position: relative;
+  cursor: pointer;
+  margin-right: 15px;
+  .rec-1 {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 2.56px;
+    height: 7.24px;
+    background: #0BA1DC;
+    transform: rotate(-45deg);
+  }
+  .rec-2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.69px;
+    height: 12.78px;
+    background: #0BA1DC;
+    transform: rotate(45deg);
+  }
+}
