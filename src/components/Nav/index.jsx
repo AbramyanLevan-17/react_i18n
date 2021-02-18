@@ -6,13 +6,15 @@ import De from './De'
 
 const Nav = ({ changeLanguage, t, flag }) => {
 
-  const curFlag = flag === 'en' ? (<En></En>) : (<De></De>)
+  const curFlag = flag === 'en' ? (<En></En>) : (<De></De>);
+
   return (
     <nav className="menu">
       <div className="menu__wrapper">
         <Link to='/'><div className="menu__logo">{t('Logo')}</div></Link>
-        <div className="menu__right-side">{curFlag}
+        <div className="menu__right-side">
           <div className="menu__lang">
+            {curFlag}
             <select name="lang" id="lang" onChange={changeLanguage}>
               <option value="en">EN</option>
               <option value="de">DE</option>

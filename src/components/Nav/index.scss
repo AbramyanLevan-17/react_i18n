@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-width: 292px;
   }
   .menu__logo {
     font-size: 24px;
@@ -30,6 +31,7 @@
   .menu__lang {
     font-weight: 400;
     padding-right: 30px;
+    justify-self: start;
     display: flex;
     align-items: center;
     span {

@@ -16,7 +16,7 @@ const Home = ({t}) => {
       <Leadership t={t}/>
       <Inc/>
       <GetStarted t={t}/>
-      <SupFooter/>
+      <SupFooter t={t}/>
     </>
   )
 }
